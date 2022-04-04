@@ -5,6 +5,8 @@ Utility Functions: Input/Output & Transformation
 import random
 import heapq
 
+from numpy import array
+
 
 def fileToMatrix(filePath):
     """
@@ -34,6 +36,18 @@ def randomMatrix():
     """
     list = random.sample(range(1,17), 16)
     return arrayToMatrix(list)
+
+
+def isMatrixValid(matrix):
+    """
+    Checks if the matrix is valid
+    """
+    array = matrixToArray(matrix)
+    # Checks if the matrix member is unique
+    unique = len(array) == len(set(array))
+    # Checks the number of empty tiles
+    empty_tile = sum(1 for i in array if (i < 1 or i > 15))
+    return unique and empty_tile == 1
 
 
 def matrixToArray(matrix):

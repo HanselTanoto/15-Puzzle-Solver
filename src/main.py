@@ -26,6 +26,9 @@ while(True):
         if (matrix == None):
             print("File not found! Current working directory is", os.getcwd(), ".\n")
             continue
+        if (not util.isMatrixValid(matrix)):
+            print("Invalid matrix!\n")
+            continue
     
     elif choice == "2":
         print("Generating a random puzzle configuration...\n")
