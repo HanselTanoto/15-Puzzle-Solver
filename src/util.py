@@ -5,8 +5,6 @@ Utility Functions: Input/Output & Transformation
 import random
 import heapq
 
-from numpy import array
-
 
 def fileToMatrix(filePath):
     """

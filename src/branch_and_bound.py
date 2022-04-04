@@ -245,8 +245,9 @@ def solveBnB(matrix):
             # Add the child to the live nodes and generated nodes
             heapq.heappush(live_nodes, (child))
             generated_nodes.append(child)
-        print("Generating nodes... " + str(idx), end='\r')
+        print("Solving... " + str(idx), end='\r')
         sys.stdout.flush()
+    print("\n")
     final_node = expand_node
     return generated_nodes, evaluated_nodes, final_node
 

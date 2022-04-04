@@ -29,6 +29,7 @@ while(True):
         if (not util.isMatrixValid(matrix)):
             print("Invalid matrix!\n")
             continue
+        print()
     
     elif choice == "2":
         print("Generating a random puzzle configuration...\n")
